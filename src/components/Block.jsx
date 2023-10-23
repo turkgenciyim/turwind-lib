@@ -1,3 +1,6 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+const code = `
 import gsap from 'gsap'
 
 import { useEffect, useRef } from 'react'
@@ -123,7 +126,7 @@ const Header = () => {
               nemo.
             </p>
             <a
-              href={`/#blocks`}
+              href={"#blocks"}
               className={
                 'flex justify-between items-center bg-blue-600 hover:bg-blue-700 rounded-md transition-all mt-12 pl-8 pr-4 py-4 text-white'
               }
@@ -163,7 +166,7 @@ const Header = () => {
               nemo.
             </p>
             <a
-              href={`/#blocks`}
+            href={"#blocks"}
               className={
                 'flex justify-between items-center bg-neutral-100 hover:bg-white rounded-md transition-all mt-12 pl-8 pr-4 py-4 text-neutral-700'
               }
@@ -192,3 +195,16 @@ const Header = () => {
 }
 
 export default Header
+
+`
+const Block = () => {
+  return (
+    <div className={'bg-white h-64'}>
+      <SyntaxHighlighter language='javascript' style={atomDark}>
+        {code}
+      </SyntaxHighlighter>
+    </div>
+  )
+}
+
+export default Block
