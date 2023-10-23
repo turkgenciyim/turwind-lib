@@ -1,7 +1,7 @@
 import React from 'react'
 const Navigation = () => {
   return (
-    <div className='fixed inset-4 flex z-50 backdrop-blur-lg rounded-full  bg-blue-950/75 justify-between items-center h-24 p-8 container mx-auto'>
+    <div className='sticky flex z-50 backdrop-blur-lg rounded-full  bg-blue-700 justify-between items-center h-24 p-8 container mx-auto'>
       <h1 className='text-3xl text-white  bg-clip-text text-transparent bg-gradient-to-tr from-blue-200 to-white font-black'>
         TurwindUI
       </h1>

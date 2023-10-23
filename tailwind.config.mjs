@@ -8,7 +8,8 @@ export default {
       fontFamily: {
         dm: ['DM Sans Variable'],
         dela: ['Dela Gothic One'],
-        inter: ['Inter Variable']
+        inter: ['Inter Variable'],
+        noto: ['Noto Sans']
       },
       colors: {
         light: {

@@ -1,5 +1,9 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { coldarkDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx'
+
+SyntaxHighlighter.registerLanguage('jsx', jsx)
+
 const code = `
 import gsap from 'gsap'
 
@@ -200,7 +204,7 @@ export default Header
 const Block = () => {
   return (
     <div className={'bg-white h-64'}>
-      <SyntaxHighlighter language='javascript' style={atomDark}>
+      <SyntaxHighlighter language='jsx' style={coldarkDark}>
         {code}
       </SyntaxHighlighter>
     </div>

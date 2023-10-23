@@ -1,12 +1,19 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Header from "../components/Header.jsx";
-import Block from '../components/Block.jsx'
+import Features from "../components/Features";
+
 
 ---
 
 <Layout>
- <Header client:load/>
- <Block client:load/>
+ <Header/>
+ <Features/>
+ <div class="h-[60vh]">
+    <img src="/blocks.svg"  class="inset-0 -z-10 w-full h-full  object-cover"/>
+    <div class="container mx-auto z-10 relative">
+       
+      </div>
+   </div>
 </Layout>
 
