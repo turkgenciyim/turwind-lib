@@ -1,14 +1,14 @@
 ---
 import '../styles/base.css';
-import '@fontsource-variable/inter';
-import '@fontsource/dela-gothic-one';
 import '@fontsource-variable/dm-sans';
 import "@fontsource/noto-sans/900.css"
 import "@fontsource/noto-sans/300.css"
 import "@fontsource/noto-sans/400.css"
 import "@fontsource/noto-sans/500.css"
 import "@fontsource/noto-sans/600.css"
-import Navigation from "../components/Navigation.jsx";
+import Navigation from "../components/Navigation.astro";
+const path = Astro.url.pathname;
+const isBlock = path == "/block"
 ---
 <html>
   <head>
@@ -20,11 +20,28 @@ import Navigation from "../components/Navigation.jsx";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body>
-     <slot />
+{ isBlock && <Navigation/>}
+<main class="font-dm">
+  <slot />
+</main>
+ <footer></footer>
      <select class="fixed bottom-12 right-12 z-20">
       <option value="system">System</option>
       <option value="dark">Dark</option>
       <option value="light">Light</option>
     </select>
+    <style is:global>
+      div[data-rehype-pretty-code-fragment] { background-color: #111;}
+      pre > code {
+        display: grid;
+        background-color: rgba(200, 200, 255, .09);
+      }
+      .highlighted {
+        background-color: rgba(200,200,255,.1);
+        border-left-color: #60a5fa;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+    </style>
     </body>
 </html>
